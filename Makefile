@@ -1,6 +1,6 @@
 
 
 INCLUDES = lib/raywin.cpp lib/alg.cpp 
-
+LIBS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 all:
-	g++ main.cpp $(INCLUDES) -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -o target.out
+	g++ main.cpp $(INCLUDES) $(LIBS) -o target.out

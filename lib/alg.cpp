@@ -131,7 +131,7 @@ void Graph::drawStructure(Camera2D &cam_object){
         DrawCircleV(posV,30,RED);
 
 
-    }
+        }
 
 
 }
