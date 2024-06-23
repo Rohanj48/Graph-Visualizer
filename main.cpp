@@ -1,19 +1,20 @@
 #include "lib/raywin.h"
 #include "lib/raywin.h"
-#include "lib/alg.h"
-int main(){
+#include "lib/graph.h"
+int main()
+{
 
     Raywin Game;
-    Graph G1 ;
+    Graph G1;
 
+    while (Game.windowShouldNotClose())
+    {
 
-    while(Game.windowShouldNotClose()){
-        
         // to be called in order
         Game.windowDrawCalls();
         // window draw calles here
 
-            G1.createNodeOverlay(Game.main_camera);
+        G1.createNodeOverlay(Game.main_camera);
 
         //
 
@@ -21,12 +22,11 @@ int main(){
 
         // draw graps herer
 
-            G1.drawStructure(Game.main_camera);;
+        G1.drawStructure(Game.main_camera);
+        ;
 
         Game.windowCameraEndDrawCalls();
         // anythig draw above wiill come under the camera
-
     }
     return 0;
-
 }
