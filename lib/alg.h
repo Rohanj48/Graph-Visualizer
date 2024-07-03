@@ -1,10 +1,15 @@
-#include "graph.h"
+#pragma once
 
+#include "utils.cpp"
 class Algorithm
 {
 
-    Graph graph;
-    Algorithm(Graph &G);
+public:
+    std::map<int, node> &node_map;
 
-    void dfs();
+    int step_size = 0;
+
+    Algorithm(std::map<int, node> &node_map);
+
+    void dfs_step(int Starting_node_id);
 };

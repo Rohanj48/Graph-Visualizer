@@ -3,8 +3,11 @@
 #include <iostream>
 #include <raylib.h>
 #include <cmath>
+#include "alg.h"
+
 Graph::Graph()
 {
+    Alg = new Algorithm(node_map);
 }
 
 void Graph::intitAllNodes(int node_count)
@@ -140,6 +143,11 @@ void Graph::drawStructure(Camera2D &cam_object)
 
         DrawCircleV(posV, 30, RED);
     }
+}
+
+std::map<int, node> &Graph::get_node_map()
+{
+    return node_map;
 }
 
 // void Graph::dfs(){

@@ -2,27 +2,16 @@
 #include <map>
 #include <vector>
 #include "raylib.h"
-
-struct node
-{
-    int id;
-
-    int degree = 0;
-    int visited;
-
-    Vector2 world_pos;
-    int radius = 30;
-    std::vector<int> nbors;
-
-    node(int id) : id(id) {}
-};
-
+#include "alg.h"
+#include "utils.cpp"
 class Graph
 {
 private:
+    // map with [id] = node
     std::map<int, node> node_map;
-    int graph_display_structure;
+    Algorithm *Alg;
 
+    int graph_display_structure;
     int new_node_id;
 
 public:
@@ -43,5 +32,8 @@ public:
     /// @brief handles the drawing of the graph structure
     void drawStructure(Camera2D &cam_object);
 
-    // algorithim for dfs
+    // overlay for starting the dfs
+
+    // getter
+    std::map<int, node> &get_node_map();
 };

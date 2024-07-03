@@ -44,6 +44,11 @@
         "ostream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
-    }
+        "typeinfo": "cpp",
+        "optional": "cpp"
+    },
+    "files.autoSave": "onWindowChange",
+    "editor.fontFamily": "Fira Code",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.clang_format_fallbackStyle": "Visual Studio"
 }
