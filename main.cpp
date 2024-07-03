@@ -23,7 +23,6 @@ int main()
         // draw graps herer
 
         G1.drawStructure(Game.main_camera);
-        ;
 
         Game.windowCameraEndDrawCalls();
         // anythig draw above wiill come under the camera
